@@ -1,0 +1,20 @@
+version: "3"
+services: 
+    web:
+        build: ./web/
+        image: webapp
+        container_name: frontend-web
+        ports: 
+            - "4200:4200"
+        volumes: 
+            - "./web:/app/web"
+        links: 
+            - server
+    server:
+        build: ./server/
+        image: serverapp
+        container_name: frontend-server
+        ports:
+            - "8080:8080"
+        volumes:
+            - "./server:/app/server"

@@ -1,0 +1,24 @@
+.nav-header {
+    background-color: rgb(247,247,247);
+    border-bottom: 2px solid;
+    width: 100%;
+    height: 100px;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.logo-container {
+    position: absolute;
+    top: 0;
+    width: 400px;
+    height: 100px;
+}

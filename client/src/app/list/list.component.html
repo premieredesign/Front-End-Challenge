@@ -1,0 +1,21 @@
+<div class="container">
+    <div [ngClass]="buildEnrolleeClass(enrollee)" (click)="updateEnrollee(enrollee, i)"
+        *ngFor="let enrollee of enrollees; index as i;">
+        <div *ngIf="!enrollee.active" class="enrollee-disable"></div>
+        <div class="enrollee-badge-top">
+            <div class="enrollee-badge-holder"></div>
+        </div>
+        <div class="enrollee-badge-img">
+            <div class="img-container">
+                <img src={{enrollee.img}} alt="">
+            </div>
+        </div>
+        <div class="enrollee-badge-info">
+            <div class="enrollee-name">{{enrollee?.name}}</div>
+            <div class="enrollee-info"><span class="boldy">DOB: </span>{{enrollee?.dateOfBirth}}</div>
+            <div class="enrollee-info"><span class="boldy">Active: </span>{{enrollee?.active}}</div>
+            <div class="enrollee-info"><span class="boldy">ID: </span>{{enrollee?.id}}</div>
+        </div>
+    
+    </div>
+</div>

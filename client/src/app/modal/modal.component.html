@@ -1,0 +1,30 @@
+<div class="modal-container">
+    <div class="modal-name-container">
+        <h1>Edit: {{enrolleeName}}</h1>
+        <div class="img-container">
+            <img src="{{data?.img}}" alt="">
+        </div>
+    </div>
+    <mat-form-field class="modal-edit-form">
+        <mat-label>Enter New Name:</mat-label>
+        <input matInput type="text" [(ngModel)]="enrolleeName">
+    </mat-form-field>
+
+    <mat-form-field class="modal-edit-form">
+        <mat-label>Enter DOB: YYYY-MM-DD (Optional):</mat-label>
+        <input matInput type="text" [(ngModel)]="enrolleeDOB">
+    </mat-form-field>
+
+    <h1 class="modal-label" mat-label>Activation Status:</h1>
+    <mat-radio-group  class="modal-check-container"
+        [(ngModel)]="enrolleeActive">
+        <mat-radio-button class="modal-check-btn"  [value]="true">
+            Active
+        </mat-radio-button>
+        <mat-radio-button class="modal-check-btn" [value]="false">
+            Not Active
+        </mat-radio-button>
+    </mat-radio-group>
+    <div class="model-error" *ngIf="showErr !== ''">{{showErr}}</div>
+    <button class="btn" (click)="close()" mat-raised-button>Save</button>
+</div>

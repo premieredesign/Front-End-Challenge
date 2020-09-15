@@ -1,0 +1,153 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.enrollee-container, .enrollee-data-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.enrollee-badge {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  cursor: pointer;
+  position: relative;
+  align-items: center;
+  box-sizing: inherit;
+  -webkit-font-smoothing: antialiased;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 35, 70, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 35, 70, 0.2);
+  margin: 30px;
+  overflow: hidden;
+  width: 250px;
+  &:hover {
+    z-index: 1;
+    transform: translateY(-1px);
+    box-shadow: 0 16px 64px 0 rgba(0, 35, 70, 0.2);
+  }
+}
+
+.enrollee-badge-top {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  background-color: #cca000;
+  width: 100%;
+  height: 60px;
+  align-items: center;
+}
+
+.enrollee-badge-holder {
+  position: absolute;
+  width: 50px;
+  height: 10px;
+  border-radius: 8px;
+  top: 10%;
+  background-color: white;
+}
+
+.enrollee-badge-img {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  background-image: url('../../assets/img/meridian-logo.jpeg');
+  background-position: center;
+  background-size: cover;
+}
+
+.enrollee-badge-info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  background-color: rgb(35, 47, 62);
+}
+
+.enrollee-badge-not-active {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  cursor: pointer;
+  position: relative;
+  align-items: center;
+  box-sizing: inherit;
+  -webkit-font-smoothing: antialiased;
+  background-color: darkgray;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 35, 70, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 35, 70, 0.2);
+  margin: 30px;
+  width: 250px;
+  &:hover {
+    z-index: 1;
+    transform: translateY(-1px);
+    box-shadow: 0 16px 64px 0 rgba(0, 35, 70, 0.2);
+  }
+}
+
+.enrollee-disable {
+  position: absolute;
+  background-color: black;
+  opacity: 0.8;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.enrollee-badge-update {
+  transition: all 2s ease-in-out;
+  animation: fadeIn 2s ease-in-out;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.img-container {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  align-self: center;
+  width: 150px;
+  height: 150px;
+  border: 2px solid tan;
+  overflow: hidden;
+}
+
+@keyframes fadeIn {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-color: black;
+  }
+}
+
+.enrollee-name {
+  font-size: 25px;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.enrollee-info {
+  color: white;
+  font-size: 15px;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.boldy {
+  font-weight: bold;
+}
